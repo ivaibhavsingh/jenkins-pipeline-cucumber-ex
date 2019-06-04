@@ -10,9 +10,10 @@ pipeline{
 
                 withMaven(maven: 'maven_3_5_0') {
                     sh 'mvn clean install'
+                    echo 'failing at step 1'
 
                 }
-                //testing
+                
 
             }
         }
@@ -22,7 +23,7 @@ pipeline{
 
                 withMaven(maven: 'maven_3_5_0') {
                     sh 'mvn test'
-
+                echo 'failing at step 2'
                 }
 
             }
@@ -35,6 +36,7 @@ pipeline{
                 cucumber buildStatus: "UNSTABLE",
                     fileIncludePattern: "**/cucumber.json",
                     jsonReportDirectory: 'target'
+                   echo 'failing at step 3'
 
             }
 
