@@ -12,6 +12,7 @@ pipeline{
                     sh 'mvn clean install'
 
                 }
+                //testing
 
             }
         }
