@@ -22,6 +22,8 @@
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
+                    <fork>true</fork>
+                    <executable>/usr/lib/jvm/java-8-openjdk-amd64/bin/javac</executable>
                 </configuration>
             </plugin>
             <plugin>
